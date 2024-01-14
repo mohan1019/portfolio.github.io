@@ -157,3 +157,30 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// script.js
+const javaPaths = document.querySelectorAll('.java path');
+
+javaPaths.forEach(path => {
+  path.addEventListener('mouseover', function() {
+    this.style.fill = '#ff0000'; // Change to the desired hover color
+  });
+
+  path.addEventListener('mouseout', function() {
+    this.style.fill = ''; // Revert to the original fill color
+  });
+});
+
+
+const copyEmail = async (email) => {
+  try {
+    await navigator.clipboard.writeText(email);
+    console.log('Content copied to clipboard');
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+}
+
+const showProject = () => {
+  
+}

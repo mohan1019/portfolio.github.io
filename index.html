@@ -6,11 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohan's Portfolio</title>
+  <style>
 
+body { 
+  background: rgb(16,12,8);
+}
+</style>
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
 
   <!--
     - custom css link
@@ -54,9 +59,9 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span style="color: #10B981;">Show Contacts</span>
 
-          <ion-icon name="chevron-down"></ion-icon>
+          <ion-icon name="chevron-down" style="color: #10B981;"></ion-icon>
         </button>
 
       </div>
@@ -67,58 +72,21 @@
 
         <ul class="contacts-list">
 
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:mohankumar1019@gmail.com" class="contact-link">mohankumar1019@gmail.com</a>
-            </div>
-
+          <li class="form-btn" style="border-radius: 25px;">
+            <a href="./assets/files/Mohan_Malleshappa_Resume.pdf" target="_blank"><button class="info-content-cv" ><p style="color: #10b981;">View/Download CV</p></button></a>
           </li>
 
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <img src="./assets/images/mail.svg
+                  " alt="design icon" width="33">
             </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
+            <div class="contact-info" id="email-Info">
 
-              <a href="tel:(201) 275-8449" class="contact-link">(201) 275-8449</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">October 24, 2000</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>New Jersey, United States</address>
+              <a target="_top" onclick="copyEmail('mohankumar1019@gmail.com')" href="mailto:mohankumar1019@gmail.com" class="contact-link">mohankumar1019@gmail.com</a>
+              <a target="_top" onclick="copyEmail('mohankumar1019@gmail.com')" href="mailto:mohankumar1019@gmail.com" class="contact-link">mg946@njit.edu</a>
             </div>
 
           </li>
@@ -168,19 +136,19 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link>Skills</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link>Experience</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link>Education</button>
           </li>
 
           <li class="navbar-item">
@@ -199,7 +167,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about  active" data-page="skills">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -221,147 +189,291 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
-
+          <header><h3 class="h3 skills-title">My skills</h3></header>
+          
           <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React Native</h5>
-                <data value="90">90%</data>
+            <div class="service-container">
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Programming<br>Languages</h4>
               </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Java</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Structures and Algorithms</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React Js</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Node Js</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Database Management System</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Client From USA" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Client From USA</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                  </p>
+              <button class="skill-hover">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="./assets/images/java.svg
+                  " alt="design icon" width="25">
                 </div>
 
+                <div class="service-content-box">
+                  <h4 class="h5 service-item-title">Java</h4>
+                </div>
+              </li>
+              </button>
+              <button class="skill-hover">
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="./assets/images/python.svg
+                  " alt="design icon" width="30">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h5 service-item-title">Python</h4>
+
+              </li>
+              </button>
+              <button class="skill-hover">
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="./assets/images/javascript.svg
+                  " alt="design icon" width="30">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h5 service-item-title">JavaScript</h4>
+
+              </li>
+            </button>
+            </div>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <div class="service-container">
+            <div class="service-content-box">
+              <h4 class="h5 service-item-title">Web and Mobile Technologies</h4>
+            </div>
+            <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/nodejs.svg
+                " alt="design icon" width="30">
               </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Node</h4>
+
             </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/react.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">React</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/phone.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">ReactNative</h4>
+
+            </li>
+          </button>
+          </div>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <div class="service-container">
+            <div class="service-content-box">
+              <h4 class="h5 service-item-title">Database<br>Management</h4>
+            </div>
+            <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/mysql.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">SQL</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/mongodb.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Mongo</h4>
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/firebase.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Firebase</h4>
+
+            </li>
+          </button>
+          </div>
+        </ul>
+
+
+        <ul class="skills-list content-card">
+          <div class="service-container">
+            <div class="service-content-box">
+              <h4 class="h5 service-item-title">Cloud computing Technologies</h4>
+            </div>
+            <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/aws.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">AWS</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/azure.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">AZURE</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/gcp.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">GCP</h4>
+
+            </li>
+          </button>
+          </div>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <div class="service-container">
+            <div class="service-content-box">
+              <h4 class="h5 service-item-title">Blockchain <br>Technologies</h4>
+            </div>
+            <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/solidity.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Solidity</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/web3.png
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Web3.js</h4>
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/hardhat.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">HardHat</h4>
+
+            </li>
+          </button>
+          </div>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <div class="service-container">
+            <div class="service-content-box">
+              <h4 class="h5 service-item-title">Application <br>Software</h4>
+            </div>
+            <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/git.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Git</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/xcode.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">XCode</h4>
+
+            </li>
+          </button>
+          <button class="skill-hover">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/android.svg
+                " alt="design icon" width="30">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h5 service-item-title">Android Studio</h4>
+            </li>
+          </button>
+          </div>
+        </ul>
+
 
           </ul>
 
         </section>
-
-
-        <!--
-          - testimonials modal
-        -->
 
         <div class="modal-container" data-modal-container>
 
@@ -373,87 +485,9 @@
               <ion-icon name="close-outline"></ion-icon>
             </button>
 
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Client From USA" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Client From USA</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                  release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                  software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-              </div>
-
-            </div>
-
           </section>
 
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <!-- <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section> -->
+        </div> 
 
       </article>
 
@@ -465,83 +499,18 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume" data-page="experience">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title">Experience</h2>
         </header>
 
         <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="bookmark-outline" style="font-size: 1.6rem; color: #10B981;"></ion-icon>
             </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New Jersey Institute Of Technology</h4>
-
-              <span>2023-present</span>
-
-              <p class="timeline-text">
-                Master Of Science - Computer Science
-                <br>
-                Grade: 3.14 GPA
-                </br>
-
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Sir M Visvesvaraya Institute Of Technology</h4>
-
-              <span>2018 — 2022</span>
-
-              <p class="timeline-text">
-                Bachelor of Engineering - Computer Science
-                <br>
-                Grade: 3.14 GPA
-                </br>
-
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Lal Bahadur Shastri Vidhyalaya</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                High School Diploma, Mathematics
-                <br>
-                Grade: A+
-                </br>
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
           </div>
 
           <ol class="timeline-list">
@@ -552,15 +521,14 @@
               <span>Cognitive Clouds</span>
 
               <span>Aug 2022 — Jun 2023</span>
-
-              <p class="timeline-text">
-                Developed a mobile application supported on both iOS and android for beauty and salon services. 
-                Implemented crucial functionalities like dashboard, scheduling, in-app notifications catering 
-                to both user and vendor perspectives. Ensured operational excellence and performed thorough 
-                integration and unit testing using Jest.js. Enabled Push notification system using Firebase Cloud Messaging.
-                <br>
-                Skills: Mobile Applications · React Native · React · Express.js · Node.js · MongoDB · E-Commerce · Jest.js
-              </p>
+              <span>Skills : React Native · React · Express.js · Node.js · MongoDB · Jest.js </span> </br>
+              <ul>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Developed a mobile application supported on both iOS and android for beauty and salon services. </p></li></br>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Implemented crucial functionalities like dashboard, scheduling, in-app notifications catering to</p></li>
+                <li class="each-content" style="margin-left: 2rem;">both user and vendor perspectives.</li> </br>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Ensured operational excellence and performed thorough integration and unit testing using Jest.js.</p></li></br>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Enabled Push notification system using Firebase Cloud Messaging.</p></li></br></br>
+              </ul>
 
             </li>
 
@@ -570,12 +538,14 @@
               <span>Freight Deck</span>
 
               <span>Jan 2022 - Mar 2022 · 3 mos</span>
-
-              <p class="timeline-text">
-                Contributed to the team at Freight Deck, a Collaborative TMS Logistics platform application. 
-                Employed MERN Stack technologies to develop and seamlessly integrate vital features into the platform.
-                Led the creation of an Electronic Proof of Delivery system, enabling effective verification of received B2B shipments.
-              </p>
+              <span>Skills : React Native · React · Express.js · Node.js · MongoDB</span> </br>
+              <ul>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Contributed to the team at Freight Deck, a Collaborative TMS Logistics platform application. </p></li></br>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Employed MERN Stack technologies to develop and seamlessly integrate vital features into </p></li>
+                <li class="each-content" style="margin-left: 2rem;">the platform.</li></br>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content">Led the creation of an Electronic Proof of Delivery system, enabling effective verification of </p></li>
+                <li class="each-content" style="margin-left: 2rem;">received B2B shipments.</li></br>
+              </ul>
 
             </li>
 
@@ -585,142 +555,21 @@
               <span>Bytematic IT Solutions</span>
 
               <span>Jan 2021 - Jun 2021 · 6 mos</span>
-
-              <p class="timeline-text">
-
-                Skills: React · JavaScript · SQL · PHP · Node.js 
-              </p>
+              <span>Skills : React · JavaScript · SQL · PHP · Node.js </span> </br>
+              <ul>
+                <li class="each-content"><ion-icon class="arrow-icon" name="chevron-forward-circle-outline"></ion-icon><p class="content"> Played a pivotal role in the 'Inventory Management System' project, an initiative that streamlined   </p></li>
+                  <li class="each-content" style="margin-left: 2rem;">the tracking of procurement,
+                    production, and sales of goods. Within the project scope,</li>
+                    <li class="each-content" style="margin-left: 2rem;">actively developed features encompassing checklist integration,
+                      purchase management,</li>
+                      <li class="each-content" style="margin-left: 2rem;">supplier management, and comprehensive inventory reporting</li>
+              </ul>
 
             </li>
 
           </ol>
 
         </section>
-
-        <!-- <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React Native</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Java</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data Structures and Algorithms</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React Js</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Node Js</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">SQL</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Mongo DB</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Firebase</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li> -->
-
           </ul>
 
         </section>
@@ -735,92 +584,110 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="projects">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Mobile Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Pub.dev</button>
-            </li>
-
-          </ul>
 
           <div class="filter-select-box">
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
             </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Mobile Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Pub.dev</button>
-              </li>
-
-            </ul>
 
           </div>
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active"  data-category="web development">
               <a href="#">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/video.jpeg" alt="finance" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Video Streaming Platform</h3>
+
+                <p class="project-category">Web development</p>
+
+                <div class="details" style="display: none;">
+                  <h3>Details about the project</h3>
+                </div>
+
+              </a>
+            </li>
+
+            <li class="project-item  active"  data-category="web development">
+              <a onclick="showProject()">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
+                  </div>
+                  <img src="./assets/images/health.jpeg" alt="finance" loading="lazy">
+                  </button>
+                </figure>
+
+                <h3 class="project-title">Healthy Eating Plate</h3>
+
+                <p class="project-category">Web development</p>
+                
+              </a>
+            </li>
+
+            <li class="project-item  active"  data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/blockchain.webp" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">FTM Mint</h3>
+
+                <p class="project-category">Blockchain development</p>
+
+              </a>
+            </li>
+            <li class="project-item  active" data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline" class="eyeIcon" ></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/payroll.jpeg" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Payroll Management</h3>
 
                 <p class="project-category">Web development</p>
 
               </a>
             </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-category="web development">
               <a href="#">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-outline" class="eyeIcon"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/stock.webp" alt="orizon" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Visveswaraya Stock Exchange</h3>
 
                 <p class="project-category">Web development</p>
 
@@ -842,45 +709,75 @@
         - #BLOG
       -->
 
-      <article class="blog" data-page="blog">
+      <article class="resume" data-page="education">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title">Education</h2>
         </header>
 
-        <section class="blog-posts">
+        <section class="timeline">
 
-          <ul class="blog-posts-list">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline" style="color: #10B981;"></ion-icon>
+            </div>
 
-            <li class="blog-post-item">
-              <a href="https://medium.com/@i_m_alfaizkhan/exploring-the-stripe-payment-gateway-in-flutter-e8524a0ade75"
-                target="_blank">
+            <h3 class="h3">Education</h3>
+          </div>
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Exploring the Stripe Payment Gateway In Flutter"
-                    loading="lazy">
-                </figure>
+          <ol class="timeline-list">
 
-                <div class="blog-content">
+            <li class="timeline-item">
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Flutter</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-07-27">Jul 27, 2022 · 7 min read</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Exploring the Stripe Payment Gateway In Flutter</h3>
-
-                  <p class="blog-text">
-                    Stripe payment gateway integration in flutter project.
-                  </p>
-
+              <h4 class="h4 timeline-item-title">New Jersey Institute Of Technology</h4>
+              <div style="display: flex;">
+              <span>2023 -  </span>
+              <span class="present" style="color: rgb(35, 188, 35);margin-left: 4px;"> Present</span>
                 </div>
+              <p class="timeline-text">
+                Master Of Science - Computer Science
+                <br>
+                Grade: 4.00 GPA
+                </br>
 
-              </a>
+              </p>
+
             </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sir M Visvesvaraya Institute Of Technology</h4>
+
+              <span>2018 - 2022</span>
+
+              <p class="timeline-text">
+                Bachelor of Engineering - Computer Science
+                <br>
+                Grade: 3.73 GPA 
+                </br>
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Hymamshu Jyothi Kala Peeta</h4>
+
+              <span>2016 - 2018</span>
+
+              <p class="timeline-text">
+                Pre-University
+                <br>
+                Percentage : 95.4%
+                </br>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
 
           </ul>
 
@@ -914,7 +811,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="https://formsubmit.co/mohankumar1019@email.com" method="POST" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
