@@ -152,7 +152,7 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: #10B981;
   color: var(--smoky-black);
 }
 
@@ -1260,7 +1260,7 @@ main {
 
 .form-input::placeholder { font-weight: var(--fw-500); }
 
-.form-input:focus { border-color: var(--orange-yellow-crayola); }
+.form-input:focus { border-color: #10B981; }
 
 textarea.form-input {
   min-height: 100px;

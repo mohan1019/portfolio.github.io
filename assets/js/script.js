@@ -123,7 +123,6 @@ const formBtn = document.querySelector("[data-form-btn]");
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-
     // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
@@ -181,6 +180,22 @@ const copyEmail = async (email) => {
   }
 }
 
-const showProject = () => {
-  
+const submitForm = () => {
+  let name = $('#name').val();
+  let email = $('#email').val();
+  let message = $('#message').val();
+  console.log("Name", name ,'\n' , email ,'\n' , message );
+    $.ajax({
+       method: 'POST',
+       url: 'https://formsubmit.co/ajax/mohankumar1019@gmail.com',
+       dataType: 'json',
+       accepts: 'application/json',
+       data: {
+           name: name,
+           email: email,
+           message: message
+       },
+       success: (data) => console.log(data),
+       error: (err) => console.log(err)
+    });
 }
