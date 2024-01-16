@@ -921,12 +921,12 @@ main {
 }
 
 .timeline-list {
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-name: slideUp;
 }
 
 .title-wrapper {
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-name: slideUp;
 }
 
