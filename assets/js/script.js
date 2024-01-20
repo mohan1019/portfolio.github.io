@@ -184,7 +184,7 @@ const submitForm = () => {
   let name = $('#name').val();
   let email = $('#email').val();
   let message = $('#message').val();
-  console.log("Name", name ,'\n' , email ,'\n' , message );
+  $('.form-input').val('')
     $.ajax({
        method: 'POST',
        url: 'https://formsubmit.co/ajax/mohankumar1019@gmail.com',
@@ -196,9 +196,16 @@ const submitForm = () => {
            message: message
        },
        success: (data) => { 
-        console.log(data)
-        $('.form-input').val('') },
-       error: (err) => console.log(err)
+        console.log(data);
+        formBtn.setAttribute("disabled", "");
+        $('#success').css('display', 'block');
+         },
+       error: (err) =>  { 
+        console.log(err)
+        $('#fail').css('display', 'block');
+        $('#name').val(name)
+        $('#email').val(email)
+        $('#message').val(message) }
     });
 }
 

@@ -694,7 +694,7 @@
               </a>
             </li>
             <li class="project-item  active" data-category="web development">
-              <a href="https://github.com/mohan1019/Payroll-Managment-System">
+              <a href="https://github.com/mohan1019/Payroll-Managment-System" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box" target="_blank">
@@ -771,7 +771,7 @@
               <p class="timeline-text">
                 Master Of Science - Computer Science
                 <br>
-                Grade: 4.00 GPA
+                Grade : 4.00 / 4.00 GPA
                 </br>
 
               </p>
@@ -787,7 +787,7 @@
               <p class="timeline-text">
                 Bachelor of Engineering - Computer Science
                 <br>
-                Grade: 3.73 GPA
+                Grade : 3.73 / 4.00 GPA
                 </br>
 
               </p>
@@ -850,11 +850,12 @@
             <textarea name="message" id="message" class="form-input" placeholder="Your Message" required
               data-form-input></textarea>
 
-            <button class="form-btn" type="button" onclick="submitForm()" data-form-btn>
+            <button class="form-btn" type="button" onclick="submitForm()" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
-
+            <span class="messageCheck" id="success">Message sent successfully!</span>
+            <span class="messageCheck" id="fail">Message not sent,<br>Please try again.</span>
           </form>
 
         </section>

@@ -2018,3 +2018,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #35f0b1;
   align-items: center;
 }
+.messageCheck {
+  display: none;
+  margin-top: 10px;
+  text-align: right;
+  color: #10B981;
+}
