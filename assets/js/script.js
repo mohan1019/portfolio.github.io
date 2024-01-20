@@ -195,7 +195,9 @@ const submitForm = () => {
            email: email,
            message: message
        },
-       success: (data) => console.log(data),
+       success: (data) => { 
+        console.log(data)
+        $('.form-input').val('') },
        error: (err) => console.log(err)
     });
 }

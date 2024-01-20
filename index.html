@@ -837,7 +837,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form method="POST" class="form" data-form onsubmit="return submitForm()">
+          <form method="POST" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" id="name" class="form-input" placeholder="Full name" required
@@ -850,7 +850,7 @@
             <textarea name="message" id="message" class="form-input" placeholder="Your Message" required
               data-form-input></textarea>
 
-            <button class="form-btn" type="submit"  data-form-btn>
+            <button class="form-btn" type="submit" onclick="submitForm()" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
